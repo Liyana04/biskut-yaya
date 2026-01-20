@@ -10,8 +10,150 @@
 
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <header class="sticky top-0 z-50 px-8 flex justify-between items-center bg-pink-300 shadow-md">
+    <div class="flex justify-between items-center">
+        <img src="./image/cookie.png" alt="Biskut Yaya Logo">
+        <h2 class="font-semibold leading-none text-white">Biskut <br> Yaya</h2>
+    </div>
+    <nav>
+      <ul class="flex gap-4">
+        <li><a href="index.html" class="p-2 text-white font-bold">BM</a></li>
+        <li><a href="eng.html" class="p-2  transition">ENG</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container mx-auto px-4 md:px-12">
+      
+    <div class="px-8">
+      <div class="text-center py-4">
+        <button onclick="window.location.href='index.html'" class="flex bg-pink-300 text-black font-medium p-2 hover:bg-pink-400 
+            hover:text-white hover:cursor-pointer transition-all ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-6 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>Return Home</button>
+      </div>
+      <div class="py-4">
+        <h1 class="font-black text-4xl">Order Form</h1>
+        <p class="text-gray-400">Fill in your details below to place your order.</p>
+      </div>
+      <hr class="my-4 border-pink-200">
+      <form action="#" method="POST" class="space-y-6 py-4 border border-pink-200 rounded-lg p-6 bg-white/50 shadow-md">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+              <input type="text" placeholder="Your Name" required
+                    class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+            
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" placeholder="012-3456789" required
+                    class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Address for Delivery</label>
+                <textarea rows="3" placeholder="Home No, Road, Area "
+                class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Postcode</label>
+                <input type="text" placeholder="e.g. 50000"
+                class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">City/Province</label>
+                <select class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white">
+                  <option value="">Select City</option>
+                  <option value="johor-bahru">Johor Bahru</option>
+                  <option value="pasir-gudang">Pasir Gudang</option>
+                  <option value="batu-pahat">Batu Pahat</option>
+                  <option value="muar">Muar</option>
+                  <option value="kluang">Kluang</option>
+                  <option value="segamat">Segamat</option>
+                  <option value="pontian">Pontian</option>
+                  </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">State</label>
+                <select class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white">
+                  <option value="">Select State</option>
+                  <option value="johor">Johor</option>
+                  <option value="kedah">Kedah</option>
+                  <option value="kelantan">Kelantan</option>
+                  <option value="malacca">Malacca</option>
+                  <option value="negeri-sembilan">Negeri Sembilan</option>
+                  <option value="pahang">Pahang</option>
+                  <option value="penang">Penang</option>
+                  <option value="perak">Perak</option>
+                  <option value="perlis">Perlis</option>
+                  <option value="selangor">Selangor</option>
+                  <option value="terengganu">Terengganu</option>
+                  <option value="sabah">Sabah</option>
+                  <option value="sarawak">Sarawak</option>
+                  <option value="wilayah-persekutuan">Wilayah Persekutuan</option>
+                  </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-3">Select Your Flavors</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
+              <label class="flex items-center p-3 border border-pink-100 rounded-xl hover:bg-pink-50 cursor-pointer transition">
+                <input type="checkbox" class="w-5 h-5 accent-pink-500">
+                <span class="ml-3 text-gray-700">Halia Chip</span>
+              </label>
+
+              <label class="flex items-center p-3 border border-pink-100 rounded-xl hover:bg-pink-50 cursor-pointer transition">
+                <input type="checkbox" class="w-5 h-5 accent-pink-500">
+                <span class="ml-3 text-gray-700">Serai Velvet</span>
+              </label>
+
+              <label class="flex items-center p-3 border border-pink-100 rounded-xl hover:bg-pink-50 cursor-pointer transition">
+                <input type="checkbox" class="w-5 h-5 accent-pink-500">
+                <span class="ml-3 text-gray-700">Green Chilli Choc</span>
+              </label>
+
+              <label class="flex items-center p-3 border border-pink-100 rounded-xl hover:bg-pink-50 cursor-pointer transition">
+                <input type="checkbox" class="w-5 h-5 accent-pink-500">
+                <span class="ml-3 text-gray-700">Sea Salt Walnut</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Quantity (Jars/Packs)</label>
+              <input type="number" min="1" value="1"
+                    class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Pickup/Delivery Date</label>
+              <input type="date" required
+                    class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Special Notes (Optional)</label>
+            <textarea rows="3" placeholder="Any allergies or special requests?"
+                      class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
+          </div>
+
+          <button type="button" 
+                  class="w-full bg-pink-400 text-white font-bold py-4 shadow-lg 
+                        hover:bg-pink-500 hover:cursor-pointer transition-all transform hover:scale-[1.02] active:scale-95"
+                        onclick="window.location.href='index.html?status=success'">
+            Submit Order
+          </button>
+        </form>
+    </div>
+    
+  </main>
 </body>
+<footer>
+    <p class="text-center bg-pink-300 py-4 mt-8">&copy; 2026 Biskut Yaya. All rights reserved.</p>
+</footer>
 </html>
