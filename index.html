@@ -7,7 +7,6 @@
   <title>Biskut Yaya</title>
   <link href="./output.css" rel="stylesheet">
 
-
 </head>
 <body >
   <header class="sticky top-0 z-50 px-8 flex justify-between items-center bg-pink-300 shadow-md">
@@ -55,6 +54,60 @@
         </div>
     </section>
   </main>
+  <!-- modal pop up -->
+<div id="thankYouModal" 
+     class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 ease-out">
+  
+  <div id="modalContent" 
+       class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm mx-4 transform scale-90 transition-transform duration-300 ease-out">
+    
+    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+      <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+      </svg>
+    </div>
+    
+    <h2 class="text-2xl font-bold text-gray-800 mb-2">Order Placed!</h2>
+    <p class="text-gray-600 mb-6">Thank you for your purchase. We are preparing your items now.</p>
+    
+    <button onclick="closeModal()" 
+            class="w-full bg-pink-400 hover:bg-pink-500 text-white font-bold py-3 rounded-lg transition-all active:scale-95">
+      Return to Home
+    </button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('thankYouModal');
+  const content = document.getElementById('modalContent');
+
+  window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('status') === 'success') {
+      // 1. Remove 'pointer-events-none' so user can click button
+      modal.classList.remove('pointer-events-none');
+      // 2. Fade in the background
+      modal.classList.remove('opacity-0');
+      modal.classList.add('opacity-100');
+      // 3. Scale up the content box (Zoom effect)
+      content.classList.remove('scale-90');
+      content.classList.add('scale-100');
+    }
+  }
+
+  function closeModal() {
+    // Fade out and Scale down
+    modal.classList.replace('opacity-100', 'opacity-0');
+    content.classList.replace('scale-100', 'scale-90');
+    modal.classList.add('pointer-events-none');
+
+    // Clean URL after 300ms (once animation finishes)
+    setTimeout(() => {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }, 300);
+  }
+</script>
+
 </body>
 <footer>
     <p class="text-center bg-pink-300 py-4 mt-8">&copy; 2026 Biskut Yaya. All rights reserved.</p>

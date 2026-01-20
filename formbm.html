@@ -27,8 +27,8 @@
     <div class="px-8">
       <div class="text-center py-4">
         <button onclick="window.location.href='index.html'" class="flex bg-pink-300 text-black font-medium p-2 hover:bg-pink-400 
-            hover:text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            hover:text-white hover:cursor-pointer transition-all ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 mr-6 w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>Return Home</button>
       </div>
@@ -54,9 +54,47 @@
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Address for Delivery</label>
-              <textarea rows="3" placeholder="Address "
-                        class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Address for Delivery</label>
+                <textarea rows="3" placeholder="Home No, Road, Area "
+                class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Postcode</label>
+                <input type="text" placeholder="e.g. 50000"
+                class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400">
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">City/Province</label>
+                <select class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white">
+                  <option value="">Select City</option>
+                  <option value="johor-bahru">Johor Bahru</option>
+                  <option value="pasir-gudang">Pasir Gudang</option>
+                  <option value="batu-pahat">Batu Pahat</option>
+                  <option value="muar">Muar</option>
+                  <option value="kluang">Kluang</option>
+                  <option value="segamat">Segamat</option>
+                  <option value="pontian">Pontian</option>
+                  </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">State</label>
+                <select class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white">
+                  <option value="">Select State</option>
+                  <option value="johor">Johor</option>
+                  <option value="kedah">Kedah</option>
+                  <option value="kelantan">Kelantan</option>
+                  <option value="malacca">Malacca</option>
+                  <option value="negeri-sembilan">Negeri Sembilan</option>
+                  <option value="pahang">Pahang</option>
+                  <option value="penang">Penang</option>
+                  <option value="perak">Perak</option>
+                  <option value="perlis">Perlis</option>
+                  <option value="selangor">Selangor</option>
+                  <option value="terengganu">Terengganu</option>
+                  <option value="sabah">Sabah</option>
+                  <option value="sarawak">Sarawak</option>
+                  <option value="wilayah-persekutuan">Wilayah Persekutuan</option>
+                  </select>
             </div>
           </div>
           <div>
@@ -104,9 +142,10 @@
                       class="w-full p-3 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"></textarea>
           </div>
 
-          <button type="submit" 
+          <button type="button" 
                   class="w-full bg-pink-400 text-white font-bold py-4 shadow-lg 
-                        hover:bg-pink-500 hover:cursor-pointer transition-all transform hover:scale-[1.02] active:scale-95">
+                        hover:bg-pink-500 hover:cursor-pointer transition-all transform hover:scale-[1.02] active:scale-95"
+                        onclick="window.location.href='index.html?status=success'">
             Submit Order
           </button>
         </form>
